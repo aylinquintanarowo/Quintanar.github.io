@@ -186,6 +186,31 @@
             }
         </script>
 
+        <center><img src="img/pikachu.gif" id="imagenCambiante" style="height:200px;"></center>
+
+        <script>
+
+            var imagenes = ["img/pikachu.gif", "img/psyduck.gif", "img/togepi.gif", "img/jiggly.gif", "img/snorlaz.gif"];
+
+            var ImagenActual = 0;
+
+            function ImagenSiguiente() {
+                ImagenActual = (ImagenActual + 1) % imagenes.length;
+                CambiarImagen(ImagenActual);
+            }
+            function ImagenAnterior() {
+                ImagenActual = (ImagenActual - 1 + imagenes.length) % imagenes.length;
+                CambiarImagen(ImagenActual);
+            }
+            function CambiarImagen(Imagen) {
+                var imagen = document.getElementById("imagenCambiante");
+                imagen.src = imagenes[Imagen]
+            }
+
+        </script>
+
+        <center><button onclick="ImagenSiguiente()" style="float:left;">siguiente</button></center>
+        <center><button onclick="ImagenAnterior()" style="float: right;">anterior</button></center>
     
 
 
