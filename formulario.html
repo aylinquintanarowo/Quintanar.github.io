@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="pagina.html" method="get"><br>
+        <label style="background-color: aqua;">Nombres:</label> <input type="text" name="nombres"><br>
+        <label style="background-color: blueviolet;">Apellidos:</label> <input type="text" name="apellidos"><br>
+        <label style="background-color: chartreuse;">Correo:</label><input type="email" name="correo"><br>
+        <label style="background-color: cornflowerblue;">Fecha de nacimiento:</label><input type="date" name="fecha"><br>
+        <label style="background-color: orangered;">Teléfono:</label><input type="tel" name="telefono"><br>
+        <label style="background-color: tomato;">Usuario:</label> <input type="text" name="usuario"><br>
+        <label style="background-color: peru;">Contraseña:</label><input type="password" name="contra" onchange="funcion()" id="conf"><br>
+        <label style="background-color: thistle;">Repetir contraseña:</label><input type="password" name="repetir"><br>
+        <input type="submit" value="Registrar persona" style="background-color: violet;">
+    </form>
+
+    <script>
+            function funcion() {
+                var contraseña = (document.getElementById("conf").value);
+                console.log(contraseña);
+                if (contraseña.length < 5) {
+                    alert("La contraseña es insegura: ")
+                }
+            
+            }
+    </script>
+</body>
+</html>
